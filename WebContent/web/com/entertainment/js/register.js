@@ -7,7 +7,6 @@ var register = function(){
 		"dataType": "json",
 		"data": {"username":username, "email":email, "password":password},
 		"url": "/EnjoyLife/entertainment/user/registerPesonnalInfo",
-//		url: "www.baidu.com",
 		"success": function(res){
 			alert("suc");
 		},

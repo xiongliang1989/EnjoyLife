@@ -87,9 +87,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<a href="#"><i class="halflings-icon cog"></i></a>
 					</div>
 					<h2>Regist a new account</h2>
-					<form class="form-horizontal" method="post">
-						<fieldset>
-							
+					<form class="form-horizontal" method="post">							
 							<div class="input-prepend" title="Username">
 								<span class="add-on"><i class="halflings-icon user"></i></span>
 								<input class="input-large span10" name="username" id="username" type="text" placeholder="type username"/>

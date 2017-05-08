@@ -21,13 +21,21 @@
 	</bean>
 	-->
 	
-<!-- 	<context:property-placeholder order="1" location="classpath*:jdbc.properties"/>  -->
-	
+<!--  	<context:property-placeholder location="classpath:jdbc.properties"/>  -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+<!--  		
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
 		<property name="url" value="jdbc:mysql://127.0.0.1:3306/xiongliang"/>
-		<property name="username" value="root"/>
-		<property name="password" value="root"/>
+		-->
+<!-- 	<property name="driverClassName" value="${driverClassName}"/>
+		<property name="url" value="${url}"/>
+		<property name="username" value="${username}"/>
+		<property name="password" value="${password}"/>
+ -->
+ 		<property name="driverClassName" value="org.postgresql.Driver"/>
+		<property name="url" value="jdbc:postgresql://127.0.0.1:5432/xiongliang"/>
+		<property name="username" value="postgres"/>
+		<property name="password" value="postgres"/>
 	</bean>
 	
 	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->

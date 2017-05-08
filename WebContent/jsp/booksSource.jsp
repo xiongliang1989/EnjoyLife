@@ -24,6 +24,8 @@
 <script type="text/javascript"
 	src="<%=path%>/web/com/commom/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript"
+	src="<%=path%>/web/com/commom/angular/angular_1.4.8/angular.min.js"></script>
+<script type="text/javascript"
 	src="<%=path%>/web/com/entertainment/js/register.js"></script>
 </head>
 <body>

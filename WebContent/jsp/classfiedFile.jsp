@@ -85,7 +85,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 			<div class="row-fluid">
 				<div>
-					请选择文件：<input type=""></input>
+					请选择文件：<input type="text"></input>
 					文本类型：<select>
 								<option>pdf</option>
 								<option>txt</option>

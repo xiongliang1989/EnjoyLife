@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<li class="dropdown-menu-title">
 								<span>Account Settings</span>
 						</li>
-						<li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
+						<li><a href="#"><i class="halflings-icon white user"></i> Profile</a></li>
 						<li><a href="<%=path%>/jsp/login.jsp"><i class="halflings-icon off"></i> Logout</a></li>
 					</ul>
 				</li>
@@ -56,8 +56,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="container-fluid-full">
 		<div class="row-fluid">
 				
-			<div id="sidebar-left" class="span2">
-				<div class="nav-collapse sidebar-nav">
+			<div id="sidebar-left" class="col-md-2">
+				<div class="nav-collapse">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="<%=path%>/jsp/lifeIndex.jsp"><i class="icon-bar-chart"></i><span class="hidden-tablet">生活指数分析</span></a></li>	
 						<li><a href="<%=path%>/jsp/dailyLife.jsp"><i class="icon-envelope"></i><span class="hidden-tablet"> 日常生活</span></a></li>
@@ -70,7 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			</div>
 			
-			<div id="content" class="span10">
+			<div id="content" class="col-md-10">
 			
 			
 			<ul class="breadcrumb">

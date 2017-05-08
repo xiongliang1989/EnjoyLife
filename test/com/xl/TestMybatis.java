@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.xl.entertainment.pojo.User;
 import com.xl.entertainment.servcie.IUserService;
 
-@RunWith(SpringJUnit4ClassRunner.class)     //表示继承了SpringJUnit4ClassRunner类  
+@RunWith(SpringJUnit4ClassRunner.class) 
 @ContextConfiguration(locations = {"classpath:applicationContext.xml"})  
 public class TestMybatis {
 	

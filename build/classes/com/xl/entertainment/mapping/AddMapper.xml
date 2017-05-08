@@ -13,6 +13,6 @@
     </select> 
     
 	<insert id="userRegister" parameterType="com.xl.entertainment.pojo.User">
-    	insert into user(username, email, password) values(#{username}, #{email}, #{password})
+    	insert into public.user(username, email, password) values(#{username}, #{email}, #{password})
 	</insert>  
 </mapper> 

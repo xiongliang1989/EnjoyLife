@@ -7,50 +7,54 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
    	<title></title>
-	<link href="<%=path%>/web/com/commom/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="<%=path%>/web/com/commom/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link id="base-style" href="<%=path%>/web/com/commom/bootstrap/css/style.css" rel="stylesheet">
-	<link id="base-style-responsive" href="<%=path%>/web/com/commom/bootstrap/css/style-responsive.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>	
-	<script type="text/javascript" src="<%=path%>/web/com/commom/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="<%=path%>/web/com/commom/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<%=path%>/web/com/entertainment/js/register.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%=path%>/web/com/commom/bootstrap-fileupload/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="<%=path%>/web/com/commom/bootstrap-fileupload/themes/explorer/theme.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="<%=path%>/web/com/commom/bootstrap-fileupload/js/plugins/sortable.js" type="text/javascript"></script>
+    <script src="<%=path%>/web/com/commom/bootstrap-fileupload/js/fileinput.js" type="text/javascript"></script>
+    <script src="<%=path%>/web/com/commom/bootstrap-fileupload/js/locales/fr.js" type="text/javascript"></script>
+    <script src="<%=path%>/web/com/commom/bootstrap-fileupload/js/locales/es.js" type="text/javascript"></script>
+    <script src="<%=path%>/web/com/commom/bootstrap-fileupload/themes/explorer/theme.js" type="text/javascript"></script>	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+	<style type="text/css">
+		.file-drop-zone {
+    		height: auto;
+		}
+	</style>
 </head>
 <body>
  
-<div class="navbar">
+<div class="navbar-inverse">
 	<div class="navbar-inner">
 		<div class="container-fluid">
-		<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
-		<a class="brand"><span>Entertainment</span></a>
-		<div class="nav-no-collapse header-nav">
-			<ul class="nav pull-right">
+		<a class="navbar-brand"><span>Entertainment</span></a>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav pull-right">
 				<li>
-					<a class="btn" href="#">
-						<i class="halflings-icon white wrench"></i>
+					<a class="" href="#">
+						<i class="glyphicon glyphicon-wrench white "></i>
 					</a>
 				</li>
 				<!-- start: User Dropdown -->
 				<li class="dropdown">
-					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="halflings-icon white user"></i> Liang Xiong
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" >
+						<i class="halflings-icon white glyphicon glyphicon-user"></i> Liang Xiong
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li class="dropdown-menu-title">
-								<span>Account Settings</span>
+						<li>
+							<a href="#">Account Settings</a>
 						</li>
-						<li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
-						<li><a href="<%=path%>/jsp/login.jsp"><i class="halflings-icon off"></i> Logout</a></li>
+						<li><a href="#">Profile</a></li>
+						<li><a  href="<%=path%>/jsp/login.jsp"><i class="glyphicon glyphicon-off"></i>Logout</a></li>
 					</ul>
 				</li>
 				<!-- end: User Dropdown -->
 				<li>
-					<a class="btn" href="<%=path%>/jsp/regist.jsp">
+					<a class="" href="<%=path%>/jsp/regist.jsp">
 						regist
 					</a>
 				</li>
@@ -59,12 +63,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 	</div>
 </div>
-
   
 <div class="container-fluid-full">
 		<div class="row-fluid">
 				
-			<div id="sidebar-left" class="span2">
+			<div id="sidebar sidebar-left" class="col-md-2">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="<%=path%>/jsp/classfiedFile.jsp"><i class="icon-bar-chart"></i><span class="hidden-tablet">文件归类</span></a></li>	
@@ -79,9 +82,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			</div>
 			
-			<div id="content" class="span10">
-			
-			
+			<div id="content" class="col-md-10">
+			<div>			
 			<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
@@ -90,26 +92,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</li>
 				<li><a href="#">Dashboard</a></li>
 			</ul>
-			
-			<div class="row-fluid">
-				
-				<div>
-					请选择文件：<input type="file"></input>
-					文本类型：<select>
-								<option>pdf</option>
-								<option>txt</option>
-								<option>excel</option>								
-								<option>word</option>								
-								<option>ppt</option>								
-							</select>	
-				</div>	
-				
 			</div>
-			
+			<div>
+				<form enctype="multipart/form-data">
+					<div class="form-group">
+						<input id="file-5" class="file" type="file" multiple data-preview-file-type="any" data-upload-url="#" data-max-file-count="10">
+					</div>
+        		</form>	
+			</div>
 			</div>
 			
 	</div>
 </div>
+<script>
+    $('#file-5').fileinput({
+        uploadUrl: '#',
+        allowedFileExtensions: ['jpg', 'png', 'gif', 'pdf']
+    });
 
+</script>
 </body>
 </html>
